@@ -1,1 +1,59 @@
-<p>formulario works!</p>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-6 fst-italic">Create your own POST</h1>
+            <p class="lead text-muted">Please fill the following form to create your personal post</p>
+        </div>
+    </div>
+</section>
+<div class="container">
+
+    <form>
+        <div class="row g-3">
+            <div class="col-12">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Title" value="" required>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" placeholder="Author" value="" required>
+
+            </div>
+            <div class="col-sm-6">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+
+            <div class="col-12">
+                <label for="image" class="form-label">Image</label>
+                <input type="text" class="form-control" id="image" placeholder="Insert the url" required>
+            </div>
+
+            <div class="col-12">
+                <label for="CATEGORY" class="form-label">Category</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected value="">Choose Category</option>
+                    <option class="p-2 link-secondary" value="World">World</option>
+                    <option class="p-2 link-secondary" value="Technology">Technology</option>
+                    <option class="p-2 link-secondary" value="Design">Design</option>
+                    <option class="p-2 link-secondary" value="Culture">Culture</option>
+                    <option class="p-2 link-secondary" value="Business">Business</option>
+                    <option class="p-2 link-secondary" value="Politics">Politics</option>
+                    <option class="p-2 link-secondary" value="Opinion">Opinion</option>
+                    <option class="p-2 link-secondary" value="Science">Science</option>
+                    <option class="p-2 link-secondary" value="Health">Health</option>
+                    <option class="p-2 link-secondary" value="Style">Style</option>
+                    <option class="p-2 link-secondary" value="Travel">Travel</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <label for="address" class="form-label">Post Content</label>
+                <textarea type="text" class="form-control" id="address" placeholder="Post Content" required></textarea>
+            </div>
+        </div>
+        <hr class=" my-4">
+        <button class="w-100 btn btn-dark btn-lg" type="submit">Send Post</button>
+    </form>
+</div>

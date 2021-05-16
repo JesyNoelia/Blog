@@ -1,0 +1,43 @@
+
+article{
+    width: 500px;
+    height:250px;
+    margin-bottom:30px ;
+}
+
+article img{
+    width: 200px;
+    height: 250px;
+ 
+    }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (max-width: 1200px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+
+}
+
+@media (max-width: 765px){
+      article{
+        height: auto;
+        width: 400px;
+    }
+    article img{
+    width: 50%;
+    height: auto;
+    margin-left: 110px;
+ 
+    }
+
+}

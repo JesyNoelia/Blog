@@ -1,0 +1,15 @@
+.container i{
+    margin-right: 20px;
+    font-size: 2em;
+}
+
+ul{
+    display: flex;
+}
+ul li{
+    color: white;
+    margin: 20px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
