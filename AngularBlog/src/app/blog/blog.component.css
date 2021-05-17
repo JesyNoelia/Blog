@@ -1,14 +1,17 @@
 
 article{
-    width: 500px;
-    height:250px;
+    width: 600px;
+    height:300px;
     margin-bottom:30px ;
-}
+    overflow: hidden;
+    border: 1px solid grey;
+     text-overflow: ellipsis;
+    }
 
 article img{
-    width: 200px;
-    height: 250px;
- 
+    width: 300px;
+    height: 300px;
+    
     }
 
 .container{
@@ -23,15 +26,12 @@ article img{
         flex-direction: column;
         align-items: center;
     }
-
-   
-
 }
 
 @media (max-width: 765px){
-      article{
-        height: auto;
-        width: 400px;
+    article{
+    height: auto;
+    width: 400px;
     }
     article img{
     width: 50%;

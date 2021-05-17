@@ -13,24 +13,22 @@
 
 
 <div class="container">
-    <article class="blog">
+    <article class="blog" *ngFor="let post of posts">
         <div class="card-group">
 
             <div class="card">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="card-body">
-                            <strong class="d-inline-block mb-2 text-primary">World</strong>
-                            <h3 class="mb-0">Featured post</h3>
-                            <div class="mb-1 text-muted">Nov 12</div>
-                            <p class="card-text mb-auto">This is a wider card with supporting text below as a
-                                natural lead-in to additional content.
+                            <strong class="d-inline-block mb-2 text-primary">{{post.categoria}}</strong>
+                            <h3 class="mb-0">{{post.titulo}}</h3>
+                            <div class="mb-1 text-muted">{{post.fecha}}</div>
+                            <p class="card-text mb-auto">{{post.texto}}
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 imagen">
-                        <img src="http://www.andaluciaesdigital.es/educarparaproteger/adolescentes/images/galeria/perfiles-tic/contenidos-blogs.jpg"
-                            alt="..." class="card-img-top">
+                    <div class="col-md-6 imagen">
+                        <img [src]="post.imagen" alt="..." class="card-img-top">
                     </div>
                 </div>
             </div>
