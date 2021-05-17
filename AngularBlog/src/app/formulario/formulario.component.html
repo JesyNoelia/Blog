@@ -8,31 +8,34 @@
 </section>
 <div class="container">
 
-    <form>
+    <form [formGroup]="newPost" (ngSubmit)="onSubmit()">
         <div class="row g-3">
             <div class="col-12">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Title" value="" required>
+                <input type="text" class="form-control" id="title" placeholder="Title" value=""
+                    formControlName="titulo">
             </div>
 
             <div class="col-sm-6">
                 <label for="author" class="form-label">Author</label>
-                <input type="text" class="form-control" id="author" placeholder="Author" value="" required>
+                <input type="text" class="form-control" id="author" placeholder="Author" value=""
+                    formControlName="autor">
 
             </div>
             <div class="col-sm-6">
                 <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date">
+                <input type="date" class="form-control" id="date" formControlName="fecha">
             </div>
 
             <div class="col-12">
                 <label for="image" class="form-label">Image</label>
-                <input type="text" class="form-control" id="image" placeholder="Insert the url" required>
+                <input type="text" class="form-control" id="image" placeholder="Insert the url"
+                    formControlName="imagen">
             </div>
 
             <div class="col-12">
                 <label for="CATEGORY" class="form-label">Category</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" formControlName="categoria">
                     <option selected value="">Choose Category</option>
                     <option class="p-2 link-secondary" value="World">World</option>
                     <option class="p-2 link-secondary" value="Technology">Technology</option>
@@ -50,7 +53,8 @@
 
             <div class="col-12">
                 <label for="address" class="form-label">Post Content</label>
-                <textarea type="text" class="form-control" id="address" placeholder="Post Content" required></textarea>
+                <textarea type="text" class="form-control" id="address" placeholder="Post Content"
+                    formControlName="texto"></textarea>
             </div>
         </div>
         <hr class=" my-4">
