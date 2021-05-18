@@ -1,3 +1,19 @@
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-around">
+        <button class="btn link-secondary" href="#" (click)="onClickAll()">ALL</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">World</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Technology</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Design</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Culture</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Business</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Politics</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Opinion</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Science</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Health</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)">Travel</button>
+    </nav>
+</div>
+
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
@@ -34,4 +50,11 @@
             </div>
         </div>
     </article>
+
+    <div class="newpost">
+        <hr>
+        <h4 class="fs-3 fst-italic">If you have got this far it is probably because you have liked our Blog!!</h4>
+        <p class="fs-4 lead text-muted">Would you like to help us grow?</p>
+        <a class=" fs-3 text-decoration-none link-secondary" href="#" [routerLink]="['/new']">CREATE YOUR POST</a>
+    </div>
 </div>
