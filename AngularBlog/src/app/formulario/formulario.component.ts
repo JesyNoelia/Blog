@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Post } from '../interfaces/post.interface';
 import { BlogService } from '../services/blog.service';
 
 @Component({
@@ -8,8 +9,13 @@ import { BlogService } from '../services/blog.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+  posts: Post[];
   newPost: FormGroup;
+
+  categorias: string[];
+
   constructor(private blogService: BlogService) {
+
     this.newPost = new FormGroup({
       titulo: new FormControl(),
       texto: new FormControl(),
@@ -21,6 +27,7 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.categorias = this.blogService.getCategoria()
   }
 
   onSubmit() {
