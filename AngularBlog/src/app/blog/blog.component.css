@@ -45,6 +45,47 @@ hr{
     transform: scale(1.2);
 }
 
+#Technology{
+    color: red;
+}
+
+#Travel{
+    color: rgb(150, 250, 0);
+}
+
+#Health{
+    color: rgb(80, 187, 253);
+}
+
+#Design{
+    color: indigo;
+}
+
+#Culture{
+    color: rgb(184, 184, 3);
+}
+
+#Business{
+    color: teal;
+}
+
+#Politics{
+    color: rgb(255, 145, 0);
+}
+
+#science{
+    color: rgb(9, 255, 0);
+}
+
+#World{
+    color: blue;
+}
+
+#General{
+    color: crimson;
+}
+
+
 
 @media (max-width: 1200px){
     .container{

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Post } from '../interfaces/post.interface';
 import { BlogService } from '../services/blog.service';
 
@@ -17,12 +17,12 @@ export class FormularioComponent implements OnInit {
   constructor(private blogService: BlogService) {
 
     this.newPost = new FormGroup({
-      titulo: new FormControl(),
-      texto: new FormControl(),
+      titulo: new FormControl('', [Validators.required]),
+      texto: new FormControl('', [Validators.required, Validators.maxLength(600)]),
       autor: new FormControl(),
       imagen: new FormControl(),
-      fecha: new FormControl(),
-      categoria: new FormControl(),
+      fecha: new FormControl('2021', Validators.required),
+      categoria: new FormControl('General'),
     })
   }
 
@@ -35,8 +35,10 @@ export class FormularioComponent implements OnInit {
     const resultado = this.blogService.agregarPost(this.newPost.value);
     return resultado
     //console.log(resultado);
+  }
 
-
+  checkControl(control, validatorName) {
+    return this.newPost.get(control).hasError(validatorName) && this.newPost.get(control).touched
   }
 
 }

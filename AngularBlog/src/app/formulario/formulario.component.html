@@ -12,8 +12,11 @@
         <div class="row g-3">
             <div class="col-12">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Title" value=""
-                    formControlName="titulo">
+                <input type="text" class="form-control" id="title" placeholder="Title" value="" formControlName="titulo"
+                    name="title">
+
+                <p class="mistake" *ngIf="checkControl('titulo', 'required')">A
+                    title is required</p>
             </div>
 
             <div class="col-sm-6">
@@ -47,6 +50,10 @@
                 <label for="address" class="form-label">Post Content</label>
                 <textarea type="text" class="form-control" id="address" placeholder="Post Content"
                     formControlName="texto"></textarea>
+
+                <p class="mistake" *ngIf="checkControl('texto', 'required')">Post content is required</p>
+                <p class="mistake" *ngIf="checkControl('texto', 'required')">We are sorry but your post is too long. Can
+                    contain a maximum of 600 characters</p>
             </div>
         </div>
         <hr class=" my-4">
