@@ -1,16 +1,9 @@
 <div class="nav-scroller py-1 mb-2">
     <nav class="nav d-flex justify-content-around">
-        <button class="btn link-secondary" href="#" (click)="onClickAll()">ALL</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">World</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Technology</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Design</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Culture</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Business</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Politics</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Opinion</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Science</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Health</button>
-        <button class="btn link-secondary" href="#" (click)="onClick($event)">Travel</button>
+        <button class="btn link-dark" href="#" (click)="onClickAll()">ALL</button>
+        <button class="btn link-secondary" href="#" (click)="onClick($event)"
+            *ngFor="let post of posts">{{post.categoria}}</button>
+
     </nav>
 </div>
 
