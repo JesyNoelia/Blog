@@ -11,15 +11,11 @@ export class BlogComponent implements OnInit {
 
   posts: Post[];
 
-
-
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
     this.posts = this.blogService.getAllPosts()
     console.log(this.posts);
-
-
 
   }
 

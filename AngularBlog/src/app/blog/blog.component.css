@@ -45,43 +45,43 @@ hr{
     transform: scale(1.2);
 }
 
-#Technology{
+.technology{
     color: red;
 }
 
-#Travel{
+.travel{
     color: rgb(150, 250, 0);
 }
 
-#Health{
+.health{
     color: rgb(80, 187, 253);
 }
 
-#Design{
+.design{
     color: indigo;
 }
 
-#Culture{
+.culture{
     color: rgb(184, 184, 3);
 }
 
-#Business{
+.business{
     color: teal;
 }
 
-#Politics{
+.politics{
     color: rgb(255, 145, 0);
 }
 
-#science{
+.science{
     color: rgb(9, 255, 0);
 }
 
-#World{
+.world{
     color: blue;
 }
 
-#General{
+.general{
     color: crimson;
 }
 
