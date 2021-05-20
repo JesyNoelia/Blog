@@ -40,7 +40,7 @@
                 <label for="CATEGORY" class="form-label">Category</label>
                 <select class="form-select" aria-label="Default select example" formControlName="categoria">
                     <option selected value="">Choose Category</option>
-                    <option selected *ngFor="let categoria of categorias" [value]="categoria">
+                    <option *ngFor="let categoria of categorias" [value]="categoria">
                         {{categoria}}</option>
 
                 </select>

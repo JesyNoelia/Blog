@@ -22,7 +22,7 @@ export class FormularioComponent implements OnInit {
       autor: new FormControl(),
       imagen: new FormControl(),
       fecha: new FormControl('2021', Validators.required),
-      categoria: new FormControl('General'),
+      categoria: new FormControl('', Validators.required),
     })
   }
 
