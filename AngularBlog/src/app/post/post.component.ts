@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Post } from '../interfaces/post.interface';
+import { BlogService } from '../services/blog.service';
 
 @Component({
   selector: 'app-post',
@@ -8,12 +10,24 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostComponent implements OnInit {
 
-  identificador: string;
+  posts: Post[];
+  postId: Post;
+  postCategoria: Post;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private blogService: BlogService) { }
 
-  ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params => this.identificador = params.idPost)
+  ngOnInit() {
+    this.posts = this.blogService.getAllPosts()
+    console.log(this.posts);
+
+    /* this.activatedRoute.params.subscribe(params => {
+      console.log(params.categoria);
+
+      this.postCategoria = this.blogService.getPostCategoriaFind(params.categoria)
+    }) */
+    this.activatedRoute.params.subscribe(params => {
+      this.postId = this.blogService.getPostById(parseInt(params.idPost))
+    })
 
   }
 

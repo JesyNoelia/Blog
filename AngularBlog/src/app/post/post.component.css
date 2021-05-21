@@ -1,0 +1,39 @@
+.container{
+    margin-top: 100px;
+}
+
+.newpost{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    margin-bottom: 30px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+.hero{
+    background-position: center center;
+      height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.card-group h2{
+    font-size: 3em;
+}
+
+hr{
+    width: 900px;
+    justify-content: center;
+    margin-bottom: 40px;
+}

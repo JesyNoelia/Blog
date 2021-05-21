@@ -1,1 +1,33 @@
-<p>post works!</p>
+<div class="container">
+
+    <article class="blog" *ngFor="let post of posts">
+
+        <div class="hero">
+            <img [src]="post.imagen" alt="..." class="card-img-top">
+        </div>
+
+        <div class="card-group">
+            <div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h2 class="mb-1">{{post.titulo}}</h2>
+                            <p class="mb-1 mt-2 text-muted mb-2"> {{post.autor}} - {{post.fecha}}</p>
+                            <h3 class="card-text mb-2">{{post.subtitulo}}</h3>
+                            <p class="card-text mb-auto">{{post.texto}}
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <div class="newpost">
+        <hr class=" my-4">
+        <p class="fs-4 lead text-muted">Would you like to help us grow?</p>
+        <a class=" fs-3 text-decoration-none link-secondary" href="#" [routerLink]="['/new']">CREATE YOUR POST</a>
+    </div>
+</div>
