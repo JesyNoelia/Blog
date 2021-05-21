@@ -1,6 +1,6 @@
-.container i{
+.fa-blogger{
     margin-right: 20px;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 ul{
@@ -12,6 +12,16 @@ ul li{
     list-style: none;
     cursor: pointer;
     font-size: 1.5em;
+}
+
+.social{
+    font-size: 1.2em;
+    color: white;
+}
+
+.social-footer{
+    display: flex;
+    justify-content: space-around;
 }
 
 .Technology{
