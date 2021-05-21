@@ -31,4 +31,18 @@ export class BlogService {
     console.log(resultado);
     return resultado
   }
+
+  getPostCategoriaFind(pCategoria: string): Post {
+    const resultado = this.arrayPost.find(post => post.categoria === pCategoria);
+    console.log(resultado);
+
+    return resultado;
+  }
+
+  getPostById(pId: number): Post {
+    const resultado = this.arrayPost.find(post => post.id === pId);
+    console.log(resultado);
+
+    return resultado;
+  }
 }
