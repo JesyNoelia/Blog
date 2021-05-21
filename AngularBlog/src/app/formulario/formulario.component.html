@@ -28,6 +28,8 @@
             <div class="col-sm-6">
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" id="date" formControlName="fecha">
+                <p class="mistake" *ngIf="checkControl('fecha', 'required')">A
+                    title is required</p>
             </div>
 
             <div class="col-12">
@@ -44,16 +46,28 @@
                         {{categoria}}</option>
 
                 </select>
+                <p class="mistake" *ngIf="checkControl('categoria', 'required')">A
+                    title is required</p>
             </div>
 
             <div class="col-12">
-                <label for="address" class="form-label">Post Content</label>
-                <textarea type="text" class="form-control" id="address" placeholder="Post Content"
+                <label for="subtitle" class="form-label">Subtitle</label>
+                <textarea type="text" class="form-control" id="subtitle" placeholder="Post Content"
+                    formControlName="subtitulo"></textarea>
+
+                <p class="mistake" *ngIf="checkControl('subtitulo', 'required')">Post content is required</p>
+                <p class="mistake" *ngIf="checkControl('subtitulo', 'required')">We are sorry but your subtitle is too
+                    long. Can
+                    contain a maximum of 200 characters</p>
+            </div>
+
+            <div class="col-12">
+                <label for="content" class="form-label">Post Content</label>
+                <textarea type="text" class="form-control" id="content" placeholder="Post Content"
                     formControlName="texto"></textarea>
 
                 <p class="mistake" *ngIf="checkControl('texto', 'required')">Post content is required</p>
-                <p class="mistake" *ngIf="checkControl('texto', 'required')">We are sorry but your post is too long. Can
-                    contain a maximum of 600 characters</p>
+
             </div>
         </div>
         <hr class=" my-4">

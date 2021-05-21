@@ -19,10 +19,11 @@ export class FormularioComponent implements OnInit {
     this.newPost = new FormGroup({
       titulo: new FormControl('', [Validators.required]),
       texto: new FormControl('', [Validators.required, Validators.maxLength(600)]),
+      categoria: new FormControl('', [Validators.required]),
       autor: new FormControl(),
       imagen: new FormControl(),
-      fecha: new FormControl('2021', Validators.required),
-      categoria: new FormControl('', Validators.required),
+      fecha: new FormControl('2021', [Validators.required]),
+
     })
   }
 
