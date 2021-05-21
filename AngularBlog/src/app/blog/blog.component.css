@@ -3,10 +3,7 @@ article{
     width: 600px;
     height:300px;
     margin-bottom:50px ;
-    border: 1px solid lightslategrey;
-    overflow: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    
     }
 
 article img{
@@ -20,6 +17,13 @@ article img{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.enlace{
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 10px;
+    ;
 }
 
 .newpost{

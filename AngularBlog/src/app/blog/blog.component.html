@@ -32,10 +32,11 @@
                             <strong
                                 [class]="'d-inline-block mb-2 ' + post.categoria.toLowerCase()">{{post.categoria}}</strong>
                             <h3 class="mb-0">{{post.titulo}}</h3>
-                            <div class="mb-1 mt-2 text-muted">{{post.fecha}}</div>
-                            <p class="card-text mb-auto">{{post.texto}}
+                            <p class="mb-1 mt-2 text-muted"> {{post.autor}} - {{post.fecha}}</p>
+                            <p class="card-text mb-auto">{{post.subtitulo}}
                             </p>
-                            <p class="card-text mb-auto mt-3">{{post.autor}}</p>
+                            <a href="#" class="enlace" [routerLink]="['/',post.id]">Continue
+                                reading...</a>
                         </div>
                     </div>
                     <div class="col-md-6 imagen">
