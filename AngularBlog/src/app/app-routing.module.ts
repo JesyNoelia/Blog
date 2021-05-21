@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/blog' },
   { path: 'blog', component: BlogComponent },
   { path: 'new', component: FormularioComponent },
-  { path: ':categoria/:idPost', component: PostComponent },
+  { path: ':idPost', component: PostComponent },
   { path: '**', redirectTo: '/blog' }
 ];
 
