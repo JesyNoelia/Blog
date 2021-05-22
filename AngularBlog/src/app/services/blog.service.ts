@@ -7,11 +7,14 @@ import { Post } from '../interfaces/post.interface';
 })
 export class BlogService {
 
+  idActual: number;
+
   onePost: Post;
   private arrayPost: Post[];
 
   constructor() {
     this.arrayPost = POSTS;
+    this.idActual = 8;
   }
 
   agregarPost(pPost: Post) {
@@ -44,5 +47,12 @@ export class BlogService {
     console.log(resultado);
 
     return resultado;
+  }
+
+  getLastPost() {
+    const resultado = this.arrayPost.length;
+    console.log(resultado);
+    return resultado
+
   }
 }
