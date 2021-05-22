@@ -9,26 +9,33 @@ import { BlogService } from '../services/blog.service';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+
   posts: Post[];
   newPost: FormGroup;
-
   categorias: string[];
+  lastId: any;
 
   constructor(private blogService: BlogService) {
 
     this.newPost = new FormGroup({
+      id: new FormControl('', [Validators.required]),
       titulo: new FormControl('', [Validators.required]),
       texto: new FormControl('', [Validators.required, Validators.maxLength(600)]),
       categoria: new FormControl('', [Validators.required]),
       autor: new FormControl(),
       imagen: new FormControl(),
       fecha: new FormControl('2021', [Validators.required]),
+      subtitulo: new FormControl('', Validators.required),
 
     })
   }
 
-  ngOnInit(): void {
-    this.categorias = this.blogService.getCategoria()
+  ngOnInit() {
+    this.categorias = this.blogService.getCategoria();
+    this.lastId = this.blogService.getLastPost();
+    console.log(this.lastId);
+
+
   }
 
   onSubmit() {
