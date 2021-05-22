@@ -17,8 +17,8 @@ export class PostComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private blogService: BlogService) { }
 
   ngOnInit() {
-    this.posts = this.blogService.getAllPosts()
-    console.log(this.posts);
+    /* this.posts = this.blogService.getAllPosts()
+    console.log(this.posts); */
 
     /* this.activatedRoute.params.subscribe(params => {
       console.log(params.categoria);
@@ -26,6 +26,8 @@ export class PostComponent implements OnInit {
       this.postCategoria = this.blogService.getPostCategoriaFind(params.categoria)
     }) */
     this.activatedRoute.params.subscribe(params => {
+      console.log(params.idPost);
+
       this.postId = this.blogService.getPostById(parseInt(params.idPost))
     })
 
