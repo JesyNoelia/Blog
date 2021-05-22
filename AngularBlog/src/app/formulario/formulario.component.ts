@@ -33,7 +33,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit() {
     this.categorias = this.blogService.getCategoria();
     this.lastId = this.blogService.getLastPost();
-    console.log(this.lastId);
+    //console.log(this.lastId);
 
 
   }
@@ -41,7 +41,10 @@ export class FormularioComponent implements OnInit {
   onSubmit() {
     //console.log(this.newPost.value);
     const resultado = this.blogService.agregarPost(this.newPost.value);
+    this.newPost.reset();
     return resultado
+
+
     //console.log(resultado);
   }
 
