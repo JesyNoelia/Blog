@@ -42,7 +42,9 @@ export class FormularioComponent implements OnInit {
     //console.log(this.newPost.value);
     const resultado = this.blogService.agregarPost(this.newPost.value);
     this.newPost.reset();
+    alert('Thank you for helping us grow. Your post is now available!')
     return resultado
+
 
 
     //console.log(resultado);

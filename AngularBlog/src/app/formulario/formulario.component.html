@@ -79,6 +79,6 @@
             </div>
         </div>
         <hr class=" my-4">
-        <button class="w-100 btn btn-dark btn-lg" type="submit">Send Post</button>
+        <button class="w-100 btn btn-dark btn-lg" type="submit" [disabled]="!newPost.valid">Send Post</button>
     </form>
 </div>
