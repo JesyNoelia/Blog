@@ -11,7 +11,7 @@ import { BlogService } from '../services/blog.service';
 export class PostComponent implements OnInit {
 
   posts: Post[];
-  postId: Post;
+  post: Post;
   postCategoria: Post;
 
   constructor(private activatedRoute: ActivatedRoute, private blogService: BlogService) { }
@@ -28,7 +28,7 @@ export class PostComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       console.log(params.idPost);
 
-      this.postId = this.blogService.getPostById(parseInt(params.idPost))
+      this.post = this.blogService.getPostById(parseInt(params.idPost))
     })
 
   }
